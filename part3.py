@@ -1,0 +1,5 @@
+text=input("Enter the name of file")
+f=open(text,'w')
+store_file=input("Enter the contents to be stored in a file")
+f.write(store_file)
+f.close()
