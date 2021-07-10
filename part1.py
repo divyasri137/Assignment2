@@ -1,11 +1,14 @@
-from collections import defaultdict
+file_location="C:\\Users\\noudu\\OneDrive\\Desktop\\Python2\\demo\\demo.txt"
+file_location_write="C:\\Users\\noudu\\OneDrive\\Desktop\\Python2\\demo\\demo_write.txt"
+file_object=open(file_location,'r')
+print(file_object.readlines())
+file_object.close()
 
-od = defaultdict()
-od['a'] = input("input1\n")
-od['b'] = input("input2\n")
-od['c'] = input("input3\n")
-od['d'] = input("input4\n")
-od['e'] = input("input5\n")
+file_object=open(file_location_write,'w')
+file_object.write("this is new file")
 
-num = [od]
-print(num)
+
+new_one=["this \n", "is \n", "new \n", "file \n" ]
+for new in new_one:
+    file_object.write(new)
+file_object.close()
